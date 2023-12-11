@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>산타할아버지께 편지쓰기</title>
+    <style>
+        p.style1{
+            font: bold 50px "Times New Roman", serif;
+            text-align: center;
+            color: yellow;
+            text-shadow: 0px 5px 6px #B8860B;
+        }
+        ul {
+            list-style: none;
+            text-align: center;
+            border-top: 2px solid red;
+            border-bottom: 2px solid green;
+            padding: 10px 0;
+        }
+        ul li {
+            display: inline;
+            text-transform: uppercase;
+            padding: 0 50px;
+            letter-spacing: 10px;
+        }
+        ul li a {
+            text-decoration: none;
+            color: black;
+        }
+        ul li a:hover {color: brown;}
+        body{
+             background-color: tan;
+        }
+        h1{
+            border-style: dotted;
+            border-width: thick;
+            border-color: yellow;
+        }
+
+        button{
+            background-color: maroon ;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+        }
+        input[type=submit] {
+            background-color: darkgreen ;
+            border: none;
+            color: white;
+            padding: 15px 35px;
+        }
+    </style>
+    <script>
+        function sub() {
+            const name = prompt("보내는 사람의 이름을 입력해주세요 :)");
+            document.getElementById("test").innerHTML = "- 크리스마스 소망이 모두 이루어지길 From " + name + " -";
+        }
+    </script>
+</head>
+<body>
+
+    <p class="style1">Happy Christmas</p>
+
+    <ul>
+        <li><a href="index.html" target="_self">Home</a></li>
+        <li><a href="login.html" target="_self">Login</a></li>
+        <li><a href="dear.html" target="_self">Dear</a></li>
+        <li><a href="from.html" target="_self">From</a></li>
+    </ul>
+    <h1>✉️ 산타할아버지께 편지보내기 ✉️</h1>
+    <p class="style2">원하는 소원과 꿈을 산타할아버지께 편지로 보내봐요.</p>
+
+    <button onclick="sub()">눌러주세요!</button>
+    <h2 id="test"></h2>
+    <textarea name="letter" rows="30" cols="50"></textarea><br>
+    <h2>- 산타할아버지께 -</h2>
+    <input type="submit" name="submit" value="보내기" onclick="alert('안전하게 전달되었습니다!')"/>
+</body>
+</html>

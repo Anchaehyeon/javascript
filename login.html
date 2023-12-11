@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원 정보 입력</title>
+    <style>
+        p.style1{
+            font: bold 50px "Times New Roman", serif;
+            text-align: center;
+            color: yellow;
+            text-shadow: 0px 5px 6px #B8860B;
+        }
+        ul {
+            list-style: none;
+            text-align: center;
+            border-top: 2px solid red;
+            border-bottom: 2px solid green;
+            padding: 10px 0;
+        }
+        ul li {
+            display: inline;
+            text-transform: uppercase;
+            padding: 0 50px;
+            letter-spacing: 10px;
+        }
+        ul li a {
+            text-decoration: none;
+            color: black;
+        }
+        ul li a:hover {color: brown;}
+        body{
+             background-color: tan;
+        }
+        input[type="text"], textarea {
+            width: 90%;
+            padding: 6px 0px;
+            margin: 10px 0;
+            display: inline-block;
+            border: 2px solid saddlebrown;
+            border-radius: 8px;
+        }
+        input[type="email"], textarea {
+            width: 90%;
+            padding: 6px 0px;
+            margin: 10px 0;
+            display: inline-block;
+            border: 2px solid saddlebrown;
+            border-radius: 8px;
+        }
+        input[type="number"], textarea {
+            width: 90%;
+            padding: 6px 0px;
+            margin: 10px 0;
+            display: inline-block;
+            border: 2px solid saddlebrown;
+            border-radius: 8px;
+        }
+        input[type=button] {
+            background-color: cornsilk ;
+            border: none;
+            color: brown;
+            padding: 5px 10px;
+        }
+        input[type=submit] {
+            background-color: maroon ;
+            border: none;
+            color: white;
+            padding: 15px 35px;
+        }
+        input[type=reset] {
+            background-color: darkgreen ;
+            border: none;
+            color: white;
+            padding: 15px 35px;
+        }
+    </style>
+
+    <script>
+        function get() {
+            if (document.getElementById("myCheckBox").checked) {
+                document.getElementById("result").value = "산타를 믿어요!";
+            } else {
+                document.getElementById("result").value = "산타를 믿지않아요..";
+            }
+        }
+    </script>
+</head>
+<body>
+    <p class="style1">Happy Christmas</p>
+
+    <ul>
+        <li><a href="index.html" target="_self">Home</a></li>
+        <li><a href="login.html" target="_self">Login</a></li>
+        <li><a href="dear.html" target="_self">Dear</a></li>
+        <li><a href="from.html" target="_self">From</a></li>
+    </ul>
+    <form>
+    <fieldset>
+        <legend>🎄 회원 정보 입력 🎄</legend>
+            <form action="adduser.jsp" method="post">
+            <p>
+            이름:<br>
+            <input type="text" name="name"><br>
+            이메일:<br> 
+            <input type="email" name="email"><br>
+            나이:<br>
+            <input type="number" name="email"><br>
+            <input type="checkbox" id="myCheckBox">산타를 믿으시나요? 🎅🏻<br>
+            <input type="button" onclick="get();" value="클릭">
+            <input type="text" id="result" value=""><br>
+            <input type="submit" name="submit" value="제출" onclick="alert('환영합니다. 메리크리스마스:)')"/>
+            <input type="reset" name="reset" value="초기화"/>
+            </p>
+        </form>
+    </fieldset>
+    </form>
+</body>
+</html>
